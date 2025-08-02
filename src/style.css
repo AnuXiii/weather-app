@@ -1,0 +1,102 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"); */
+@import "tailwindcss";
+@import "./css/animations.css";
+@import "./css/toastify.css";
+
+@utility container {
+	margin-inline: auto;
+}
+
+@theme {
+	/* ----------------- colors ----------------- */
+
+	--color-background: #0e0e10;
+	--color-surface: #1c1c1f;
+	--color-surface-hover: #2a2a2e;
+
+	--color-primary: #3b82f6; /* blue-500 */
+	--color-primary-hover: #2563eb;
+	--color-secondary: #8b5cf6; /* violet-500 */
+	--color-secondary-hover: #7c3aed;
+
+	--color-accent: #f43f5e; /* rose-500 */
+	--color-accent-hover: #e11d48;
+
+	--color-text: #f1f5f9;
+	--color-text-muted: #cbd5e1;
+	--color-border: #3f3f46;
+
+	--color-success: #22c55e;
+	--color-warning: #facc15;
+	--color-error: #ef4444;
+
+	--color-scrollbar: #2e2e32;
+	--color-scrollbar-thumb: #444;
+
+	/* ----------------- fonts ----------------- */
+
+	--font-poppins: "Poppins", sans-serif;
+
+	/* ----------------- timing functions ----------------- */
+
+	--ease-smooth: cubic-bezier(0.25, 1, 0.5, 1); /* Smooth and modern animation */
+	--ease-soft: cubic-bezier(0.4, 0, 0.2, 1); /* Similar to Material Design */
+	--ease-snappy: cubic-bezier(0.3, 1.2, 0.7, 1); /* Spring-like or snappy effect */
+	--ease-bouncy: cubic-bezier(0.34, 1.56, 0.64, 1); /* Bouncy and attractive */
+	--ease-decelerate: cubic-bezier(0, 0, 0.2, 1); /* Decelerates at the end */
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply font-poppins text-base bg-background text-text overflow-x-hidden min-h-screen;
+	}
+
+	h1,
+	h2,
+	h3 {
+		@apply font-bold;
+	}
+
+	input,
+	button {
+		@apply outline-none border-none font-[inherit];
+	}
+
+	button {
+		@apply cursor-pointer;
+	}
+
+	li {
+		@apply list-none;
+	}
+
+	i {
+		@apply not-italic;
+	}
+}
+
+#search_location::-webkit-search-cancel-button {
+	@apply appearance-none;
+}
+
+@layer components {
+	.btn-primary {
+		@apply flex justify-center items-center gap-2 bg-secondary m-1 mx-3 h-14 px-3 rounded-lg font-semibold duration-200 ease-bouncy hover:bg-secondary-hover hover:scale-99 active:scale-96;
+
+		&:focus-visible {
+			@apply outline-2 outline-solid outline-white;
+		}
+	}
+}
+
+.slides::-webkit-scrollbar {
+	@apply rounded-full bg-scrollbar h-2.5 w-full;
+}
+
+.slides::-webkit-scrollbar-thumb {
+	@apply rounded-full w-4 h-full bg-scrollbar-thumb cursor-grab;
+}

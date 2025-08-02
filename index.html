@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+		<meta charset="UTF-8" />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/vite.svg" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Weathery APP</title>
+		<link
+			rel="stylesheet"
+			href="/src/style.css" />
+	</head>
+	<body>
+		<!-- --------------------------------------- -->
+		<div
+			role="application"
+			id="app">
+			<!-- --------------------------------------- -->
+			<main
+				role="main"
+				id="hero"
+				class="hero">
+				<!-- --------------------------------------- -->
+				<div
+					id="hero-container"
+					class="container px-4 py-10 md:place-content-center">
+					<!-- --------------------------------------- -->
+					<div
+						class="shadow-lg shadow-black border border-solid border-border grid grid-cols-1 md:grid-cols-2 rounded-t-lg overflow-hidden">
+						<div class="relative bg-surface flex flex-col justify-center px-0 md:pl-10 md:pr-15 z-1">
+							<div class="absolute inset-0 bg-gradient-to-b from-primary/10 to-surface z-[-1]"></div>
+							<h1 class="p-6 text-center md:text-left text-2xl md:text-5xl text-balance leading-10 md:leading-18">
+								Get accurate, <span class="text-primary">real-time</span> forecasts for any
+								<span class="text-primary">location</span>
+							</h1>
+						</div>
+						<div class="border border-solid border-border">
+							<div
+								id="map"
+								class="h-[530px]"></div>
+						</div>
+					</div>
+					<!-- --------------------------------------- -->
+					<div class="shadow-lg shadow-black grid grid-cols-1 md:grid-cols-2 rounded-b-lg overflow-hidden">
+						<div class="bg-surface flex flex-col justify-center">
+							<!-- --------------------------------------- -->
+							<form
+								onsubmit="return false"
+								class="flex items-center">
+								<!-- --------------------------------------- -->
+								<div class="w-full relative group">
+									<input
+										type="text"
+										name="city_name"
+										id="city_name"
+										placeholder="Enter the city name"
+										class="w-full p-6 border border-solid border-border border-t-transparent text-lg md:text-2xl placeholder:duration-200 place-content-aroundease-decelerate focus-within:placeholder:opacity-0" />
+									<div
+										class="absolute bottom-0 w-full h-0.5 bg-secondary rounded-full scale-x-0 duration-200 ease-decelerate group-focus-within:scale-x-100"></div>
+								</div>
+								<!-- --------------------------------------- -->
+								<div class="w-full flex-1">
+									<button
+										role="button"
+										type="submit"
+										id="submit-city"
+										class="btn-primary group">
+										<span>Submit</span>
+										<svg
+											class="w-0 -ml-2 duration-200 ease-decelerate group-hover:w-5 group-hover:ml-0"
+											xmlns="http://www.w3.org/2000/svg"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="2"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											class="lucide lucide-move-right-icon lucide-move-right">
+											<path d="M18 8L22 12L18 16" />
+											<path d="M2 12H22" />
+										</svg>
+									</button>
+								</div>
+								<!-- --------------------------------------- -->
+							</form>
+							<!-- --------------------------------------- -->
+						</div>
+						<!-- --------------------------------------- -->
+						<div
+							class="hidden text-2xl text-center md:flex justify-center items-center bg-surface border-l border-solid border-border">
+							<h2 class="text-gray-300 p-4">
+								<span class="text-primary">OR</span>
+								Select location from map
+							</h2>
+						</div>
+						<!-- --------------------------------------- -->
+					</div>
+				</div>
+			</main>
+			<!-- --------------------------------------- -->
+			<section
+				id="result"
+				class="container p-4 overflow-hidden sm:p-0"
+				hidden></section>
+			<!-- --------------------------------------- -->
+		</div>
+		<!-- --------------------------------------- -->
+		<script
+			type="module"
+			src="/src/main.js"></script>
+		<!-- --------------------------------------- -->
+	</body>
+</html>
