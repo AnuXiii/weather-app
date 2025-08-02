@@ -17,6 +17,7 @@ This project was developed as part of the **[Weather App Project Challenge](http
 - **VITE**
 - **TailwindCSS**
 - **Vanilla JavaScript (ES Modules)**
+- **Leaflet** for map show
 - **Open-Meteo API** for weather data
 - **OpenStreetMap Nominatim** for reverse geocoding
 - **Custom Toast Notifications**
