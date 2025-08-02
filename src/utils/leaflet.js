@@ -9,7 +9,7 @@ import loading from "../components/loading";
 const API_KEY = import.meta.env.VITE_APP_WEATHER_API_KEY;
 const DEFAULT_POSITION = [32.4279, 53.688];
 const DEFAULT_ZOOM = 5;
-const MAP_TILE_LAYER = `https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png`;
+const MAP_TILE_LAYER = `https://tile.openstreetmap.org/{z}/{x}/{y}.png`;
 const WEATHER_DATA_URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
 
 /* ************************************************************************ */
