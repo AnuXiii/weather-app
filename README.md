@@ -1,10 +1,22 @@
-background: "#0f172a", // Dark navy background
-surface: "#1e293b", // Slightly lighter surface for cards
-primary: "#38bdf8", // Sky blue (مثلاً برای دما یا آیکن‌ها)
-secondary: "#facc15", // زرد روشن (برای آفتابی یا هشدارها)
-accent: "#7dd3fc", // رنگ مکمل برای نمودارها یا جزئیات
-textPrimary: "#f8fafc", // متن اصلی (روشن)
-textSecondary: "#94a3b8", // متن فرعی یا توضیحات
-danger: "#f87171", // رنگ باران یا هشدار
-success: "#4ade80", // هوای خوب یا نرمال
-border: "#334155", // رنگ خطوط یا جداکننده‌ها
+# Weather App 🌦️
+
+A fully functional weather application built using modern JavaScript, HTML, and CSS. This project was created as a practice challenge from [roadmap.sh](https://roadmap.sh/projects/weather-app).
+
+## 🚀 Features
+
+- 🔍 **City Search** — Enter any city name to fetch real-time weather data.
+- 📍 **Geolocation Support** — Automatically detect your current location and display the weather info.
+- 🕒 **Hourly Forecast** — Horizontal scrollable view for upcoming hourly weather.
+
+## 🧠 Purpose
+
+This project was developed as part of the **[Weather App Project Challenge](https://roadmap.sh/projects/weather-app)** from [roadmap.sh](https://roadmap.sh/). The goal was to implement real-world features and improve skills in API integration, DOM manipulation, and responsive design.
+
+## 🛠️ Technologies Used
+
+- **VITE**
+- **TailwindCSS**
+- **Vanilla JavaScript (ES Modules)**
+- **Open-Meteo API** for weather data
+- **OpenStreetMap Nominatim** for reverse geocoding
+- **Custom Toast Notifications**
