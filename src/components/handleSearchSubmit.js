@@ -25,7 +25,7 @@ async function handleCitySearchSubmit() {
 		if (marker) {
 			marker.setLatLng([weatherData.latitude, weatherData.longitude]);
 		} else {
-			marker = L.marker([weatherData.latitude, weatherData.longitude]).addTo(map);
+			L.marker([weatherData.latitude, weatherData.longitude]).addTo(map);
 		}
 
 		createWeatherData(weatherData);
